@@ -1,0 +1,15 @@
+docs
+artifacts
+tests
+scripts
+README.md
+.git/
+.agents/
+.codex/
+.aws/
+*.bak
+*.backup
+*.symbols-backup
+dev-error.txt
+*.tsbuildinfo
+.env*

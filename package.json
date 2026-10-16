@@ -1,0 +1,26 @@
+{
+  "name": "cobweb-defence-systems",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/site.test.mjs",
+    "test:routes": "node --test tests/routes.test.mjs",
+    "test:browser": "node scripts/browser-check.mjs",
+    "test:publication": "node --test tests/publication.test.mjs"
+  },
+  "dependencies": {
+    "next": "^16.2.12",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "typescript": "^5.8.2"
+  }
+}

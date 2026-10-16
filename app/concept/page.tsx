@@ -1,0 +1,8 @@
+import { pageMetadata, pages } from "@/lib/site";
+export const metadata = pageMetadata(...pages[2]);
+import { CellVisual } from "@/components/CellVisual";
+import { ModularGraphic } from "@/components/ModularGraphic";
+export default function Page(){
+  return <><section className="page-hero"><div className="container"><div className="eyebrow">High-level system concept</div><h1>The COBWEB Concept</h1><p>COBWEB explores a potentially scalable and reusable physical barrier intended to complement existing counter-UAS and air-defence systems.</p><div className="notice">This page describes a concept, proposed architecture and development objectives. No verified capability is claimed. Public information intentionally excludes exact materials, dimensions, deployment methods, control algorithms and structural calculations.</div></div></section>
+  <section className="section"><div className="container hero-grid"><div><div className="eyebrow">The COBWEB Cell</div><h2>A proposed modular cell.</h2><p>Proposed elements, subject to engineering validation:</p><ul className="list"><li>Tethered aerostat platforms</li><li>A replaceable capture barrier</li><li>Ground anchor and tensioning stations</li><li>Local control systems</li><li>Environmental monitoring</li><li>Networked command and control</li></ul></div><CellVisual /></div></section>
+  <section className="section"><div className="container assessment stack"><h2>How the proposed layer works</h2><p>The concept proposes using tethered aerosta¶»§q«^

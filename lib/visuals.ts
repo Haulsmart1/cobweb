@@ -1,0 +1,8 @@
+// Pixel-coordinate crops of the recovered artwork; these are not engineering dimensions.
+export const sectorCrops = [
+  { slug: "military-bases", crop: { left: 275, top: 145, width: 645, height: 425 }, alt: "Cropped original concept illustration of a fixed defence site and an imagined aerial barrier; not an actual installation or demonstrated capability." },
+  { slug: "energy-facilities", crop: { left: 350, top: 0, width: 918, height: 695 }, alt: "Cropped original concept illustration of energy infrastructure and an imagined aerial barrier; no interception performance or suitability is established." },
+  { slug: "airports", crop: { left: 205, top: 240, width: 820, height: 290 }, alt: "Cropped original concept illustration of an airport and imagined aerial structures; not evidence of airport suitability or deployment." },
+  { slug: "government-buildings", crop: { left: 540, top: 0, width: 715, height: 695 }, alt: "Cropped original concept illustration of government buildings and imagined aerial structures; no government relationship or endorsement is implied." },
+  { slug: "oil-and-gas-facilities", crop: { left: 250, top: 155, width: 780, height: 565 }, alt: "Cropped original concept illustration of refinery infrastructure and an imagined aerial barrier; no operational capability or process-safety approval is implied." },
+  { slug: "communications-infrastructure", crop: { left: 520, top: 0, width: 735, height: 590 }, alt: "Cropped original concept illustration of communicatio¶»§q«^
