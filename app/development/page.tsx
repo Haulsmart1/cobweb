@@ -1,13 +1,3 @@
 import { pageMetadata, pages } from "@/lib/site";
-export const metadata = pageMetadata(...pages[4]);
-const phases=[
-["Current focus","Concept and feasibility assessment","Define requirements, use cases, constraints and feasibility questions."],
-["Proposed","Computational modelling","Explore aerodynamic, structural and system behaviours through controlled modelling."],
-["Proposed","Materials and structural testing","Assess candidate approaches through laboratory and engineering tests."],
-["Proposed","Scaled demonstrator","Build a limited demonstrator to validate selected principles."],
-["Proposed","Representative research prototype","Integrate subsystems into a representative research prototype."],
-["Proposed","Trials and certification","Conduct controlled trials and pursue applicable assurance pathways."],
-["Proposed","Production readiness","Prepare repeatable manufacturing, support and quality processes."]
-];
-export default function Page(){return <><section className="page-hero"><div className="container"><div className="eyebrow">Concept and feasibility stage</div><h1>Development Programme</h1><p>COBWEB is currently an early-stage concept. Progression depends on engineering validation, testing, funding, partnership and applicable regulatory approval.</p></div></section>
-<section className="section"><div className="container"><h2>Proposed pathway</h2><p>These stages are conditional ambitions, not completed milestones or commitments. No dates or test results are established.</¶»§q«^
+export const metadata = pageMetadata(...pages[2]);
+export default function DevelopmentPage(){return <><section className="page-hero"><div className="container"><div className="eyebrow">Programme status</div><h1>Early-stage concept development.</h1><p>COBWEB is exploring whether a modular aerial barrier approach merits further technical and commercial assessment.</p></div></section><section className="section"><div className="container split"><div className="stack"><h2>What remains open</h2><ul className="list"><li>Technical and engineering feasibility.</li><li>Site access, safety and integration requirements.</li><li>Regulatory, commercial and operational considerations.</li><li>Independent evidence to support any future claims.</li></ul></div><div className="notice">No operational system, certified capability, customer deployment or validated performance is claimed. The programme remains conceptual.</div></div></section></>;}

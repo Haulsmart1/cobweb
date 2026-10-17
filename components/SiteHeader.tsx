@@ -1,33 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import { useRef, useState } from "react";
-import { usePathname } from "next/navigation";
-
-const links = [
-  ["/concept", "Concept"],
-  ["/applications", "Applications"],
-  ["/development", "Development"],
-  ["/partnerships", "Partnerships"],
-];
-
+const links = [["Concept","/concept"],["Applications","/applications"],["Development","/development"],["Partnerships","/partnerships"],["Enquiries","/contact"]];
 export function SiteHeader() {
-  const [open, setOpen] = useState(false);
-  const pathname = usePathname();
-  const toggle = useRef<HTMLButtonElement>(null);
-
-  return (
-    <header className="site-header" onKeyDown={event => {
-      if (event.key === "Escape" && open) { setOpen(false); toggle.current?.focus(); }
-    }}>
-      <div className="container nav">
-        <Link href="/" className="brand" aria-label="COBWEB Defence Systems home">
-          <span className="brand-mark" aria-hidden="true"><span /></span>
-          <span>COBWEB<small>DEFENCE SYSTEMS</small></span>
-        </Link>
-        <button ref={toggle} type="button" className="menu-toggle" onClick={() => setOpen(value => !value)} aria-expanded={open} aria-controls="main-navigation">
-          Menu
-        </button>
-        <nav id="main-navigation" className={`nav-links ${open ? "open" : ""}`} aria-label="Primary navigation">
-          {links.map(([href, label]) => <Link prefetch={false} key={href} href={href} aria-current={pathname === href || pathname.startsWith(href + "/") ? "page" : undefined} onClick={() => setOpen(false)}>{label}</Link>)}
-          <Link prefetch={false} className="btn" href="/contact" aria-current={pathn¶»§q«^
+  return <header className="site-header"><div className="header-inner"><Link className="brand" href="/" aria-label="COBWEB Defence Systems home"><span className="brand-mark">CW</span><span>COBWEB<small>DEFENCE SYSTEMS</small></span></Link><nav className="site-nav" aria-label="Main navigation">{links.map(([label,href])=><Link key={href} href={href}>{label}</Link>)}</nav></div></header>;
+}

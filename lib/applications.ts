@@ -1,14 +1,12 @@
 export const applications = [
-  {
-    slug: "military-bases", title: "Military bases",
-    summary: "Assessing fixed defence infrastructure alongside existing protection and site operations.",
-    context: "For a fixed defence site, a drone-risk discussion needs to distinguish unauthorised surveillance, disruption and potential physical attack. The relevant threat assumptions would need to be established by authorised stakeholders.",
-    relation: "A modular aerial barrier could be examined as an additional physical layer around selected fixed assets. Any relationship with existing detection, electronic warfare or air-defence measures remains an integration question.",
-    questions: ["Could a barrier coexist with authorised aircraft movements and emergency access?", "What separation from personnel, equipment and existing protection measures would be required?", "How would maintenance, weather constraints and safe removal be assessed?"],
-    related: "strategic-industrial-sites",
-  },
-  {
-    slug: "energy-facilities", title: "Energy facilities",
-    summary: "Considering generation and distribution sites, electrical clearances and continuity of access.",
-    context: "An energy-site assessment would consider whether unmanned aircraft could disrupt access or affect exposed assets. Generation facilities and electrical infrastructure present different layouts and safety constraints; they should not be treated as one standard site type.",
-    relation: "COBWEB's proposed cell-ba¶»§q«^
+  {slug:"airports",title:"Airports",summary:"Assessment questions could include airside access, protected zones, operations and safety."},
+  {slug:"communications-infrastructure",title:"Communications infrastructure",summary:"Assessment questions could include access, maintenance, coverage and service continuity."},
+  {slug:"data-centres",title:"Data centres",summary:"Assessment questions could include site access, cooling plant, security and resilience."},
+  {slug:"energy-facilities",title:"Energy facilities",summary:"Assessment questions could include live operations, maintenance windows and safety cases."},
+  {slug:"government-buildings",title:"Government buildings",summary:"Assessment questions could include public access, heritage, safety and oversight."},
+  {slug:"military-bases",title:"Military bases",summary:"Any assessment would require appropriate authority, security review and controlled handling."},
+  {slug:"nuclear-sites",title:"Nuclear sites",summary:"Assessment questions would be site-specific and subject to strict safety and regulatory review."},
+  {slug:"oil-and-gas-facilities",title:"Oil and gas facilities",summary:"Assessment questions could include hazardous areas, access and operating constraints."},
+  {slug:"ports",title:"Ports",summary:"Assessment questions could include marine operations, access routes and changing site activity."},
+  {slug:"strategic-industrial-sites",title:"Strategic industrial sites",summary:"Assessment questions could include operational continuity, safety and neighbouring land use."}
+] as const;

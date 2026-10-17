@@ -1,11 +1,5 @@
-import { applications, type Application } from "@/lib/applications";
-import { Breadcrumbs } from "@/components/StructuredData";
-import Image from "next/image";
-import { sectorVisuals } from "@/lib/visuals";
-
-export function ApplicationPage({ application }: { application: Application }) {
-  const related = applications.find(item => item.slug === application.related)!;
-  const visual = sectorVisuals[application.slug];
-  return <>
-    <section className="page-hero"><div className="container"><Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Applications", path: "/applications" }, { name: application.title, path: `/applications/${application.slug}` }]} /><div className="eyebrow">Potential assessment context</div><h1>{application.title}</h1><p>{application.summary}</p><div className="notice">COBWEB is an early-stage conceptual programme. No deployment, customer relationship, endorsement or demonstrated suitability is implied.</div></div></section>
-    {visual && <section className="section compact"><div className="container"><figure className="concept-figure application-figure" style={{maxWidth: Math.min(1000, visual.width)}}><div className="application-image-frame"><Image src={visual.src} alt={visual.alt} width={visual.width} height={visual.height} sizes={`(max-width: ${Math.min(1000, visual.width) + 32}px) calc(100vw - 32px), ${Math.min(1000, visual.width)}px`} /></div><figcaption>Visual illustration only, derived from the original concept artwork. Not a photograph of a¶»§q«^
+import { CellVisual } from "@/components/CellVisual";
+type Application = {slug:string; title:string; summary:string};
+export function ApplicationPage({application}:{application:Application}) {
+  return <><section className="page-hero"><div className="container"><div className="eyebrow">Potential assessment context</div><h1>{application.title}</h1><p>{application.summary}</p><div className="notice">This is a potential context for assessment, not a customer, validated use or operational deployment.</div></div></section><section className="section"><div className="container split"><div className="stack"><h2>Questions before any assessment</h2><ul className="list"><li>What safety, access and operating constraints apply at this specific site?</li><li>Which authorities and stakeholders would need to review a feasibility study?</li><li>How could any concept be evaluated without affecting existing operations?</li></ul><p className="notice">COBWEB remains an early-stage conceptual programme. No performance, certification or suitability claim is made.</p><a className="text-link" href="/contact">Discuss a non-sensitive introduction â†’</a></div><CellVisual /></div></section></>;
+}

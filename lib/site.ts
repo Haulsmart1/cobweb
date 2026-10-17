@@ -1,15 +1,20 @@
-import type { Metadata } from "next";
-export const siteUrl = "https://www.cobweb-defence.tech";
 export const siteName = "COBWEB Defence Systems";
-export const positioning = "COBWEB is an early-stage conceptual modular aerial barrier programme exploring a physical layer for fixed infrastructure alongside existing counter-UAS systems.";
-export function pageMetadata(path: string, title: string, description: string): Metadata {
-  const url = siteUrl + path;
-  const socialTitle = `${title} | ${siteName}`;
-  return { title, description, alternates: { canonical: url }, openGraph: { title: socialTitle, description, url, type: "website", siteName }, twitter: { card: "summary", title: socialTitle, description } };
-}
+export const siteUrl = "https://www.cobweb-defence.tech";
+export const positioning = "An early-stage conceptual programme exploring a modular aerial barrier for fixed critical infrastructure. Feasibility, performance and suitability have not been established.";
 export const pages = [
-  ["", "Modular aerial barrier concept", positioning],
-  ["/threat", "Drone risk and fixed infrastructure", "Explore the counter-UAS problem behind COBWEB: fixed infrastructure, unmanned aircraft risks and the questions facing layered site protection."],
-  ["/concept", "The COBWEB aerial barrier concept", "A public overview of COBWEB's proposed aerostat-supported, cell-based aerial barrier. Architecture intentions remain subject to feasibility and engineering validation."],
-  ["/applications", "Potential infrastructure applications", "Explore ten potential assessment contexts for the COBWEB concept, from airports and ports to energy, communications and defence infrastructure."],
-  ["/development", "Development status and proposed pathway", "COBWEB is ¶»§q«^
+  ["Home", positioning],
+  ["The concept", "A high-level overview of the COBWEB modular aerial barrier concept."],
+  ["Development", "Current development status for the early-stage COBWEB concept."],
+  ["Potential applications", "Potential assessment contexts for the COBWEB concept."],
+  ["Partnerships", "Non-sensitive partnership introductions for the COBWEB programme."],
+  ["Threat context", "High-level context for fixed-infrastructure resilience."],
+  ["About COBWEB", "About the conceptual programme and its website operator."],
+  ["Contact", "Enquiry information for relevant organisations."],
+  ["Privacy", "Privacy information for this public information website."],
+  ["Cookies", "Cookie information for this website."],
+  ["Terms of use", "Terms for this public information website."],
+  ["Export-control statement", "General export-control information."]
+] as const;
+export function pageMetadata(title: string, description: string) {
+  return { title, description };
+}

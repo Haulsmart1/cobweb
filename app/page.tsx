@@ -1,25 +1,7 @@
-import { pageMetadata, pages } from "@/lib/site";
-export const metadata = pageMetadata(...pages[0]);
 import Link from "next/link";
 import { CellVisual } from "@/components/CellVisual";
 import { ModularGraphic } from "@/components/ModularGraphic";
-
-const benefits = [
-  ["01","Availability objective","Explore whether a physical barrier could remain available around selected fixed sites."],
-  ["02","Repairability objective","Assess whether barrier elements could be replaced and repaired safely."],
-  ["03","Modular and scalable","Proposed cells would be assessed against site geometry, access and changing requirements."],
-  ["04","Complementary defence","Explore compatibility with radar, electronic warfare, interceptor drones and conventional air defence."],
-  ["05","Whole-life value","Evaluate total lifetime cost, including maintenance and replacement; no cost advantage is established."],
-  ["06","Resilient design","Investigate whether damage could be contained within individual cells; this remains unvalidated."]
-];
-
-export default function Home() {
-  return (
-    <>
-      <section className="hero">
-        <div className="container hero-grid">
-          <div className="hero-copy">
-            <div className="eyebrow">Early-stage conceptual programme</div>
-            <h1>A modular aerial barrier concept for fixed infrastructure</h1>
-            <p className="lede">
-              COBWEB is a conceptual modular aerial barrier system intended to help protect fixed critical infrastr¶»§q«^
+import { positioning } from "@/lib/site";
+export default function HomePage() {
+  return <><section className="hero"><div className="container hero-inner"><div className="eyebrow">Early-stage conceptual programme</div><h1>A modular aerial barrier concept for fixed infrastructure.</h1><p>{positioning}</p><div className="actions"><Link className="button" href="/concept">Explore the concept</Link><Link className="button secondary" href="/partnerships">Partnership enquiries</Link></div></div></section><section className="section"><div className="container split"><div><div className="eyebrow">The idea</div><h2>Explore the concept carefully.</h2><p className="section-intro">COBWEB is examining whether a modular approach could contribute to fixed-site resilience. Technical feasibility, safety and integration questions remain open.</p><Link className="text-link" href="/development">Read the development status â†’</Link></div><CellVisual /></div></section><section className="section alt"><div className="container"><div className="eyebrow">Illustrative layouts</div><h2>Modularity under review.</h2><p className="section-intro">Cell diagrams show a design idea only. They are not validated configurations, coverage estimates or performance data.</p><ModularGraphic /><div className="actions"><Link className="button" href="/applications">Explore potential contexts</Link><Link className="button secondary" href="/threat">Read the context</Link></div></div></section><section className="section"><div className="container cards">{[["Concept","A high-level description of the idea.","/concept"],["Development","What is known and what remains unvalidated.","/development"],["Responsible discussion","How to make a non-sensitive introduction.","/partnerships"]].map(([title,body,href])=><Link className="application-card-link" key={title} href={href}><article className="card"><h3>{title}</h3><p>{body}</p><span className="application-read">Read more â†’</span></article></Link>)}</div></section></>;
+}
