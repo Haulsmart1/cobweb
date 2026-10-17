@@ -1,0 +1,3 @@
+export function CellVisual() {
+  return <figure className="concept-figure"><div className="concept-art" role="img" aria-label="Illustrative conceptual modular cell diagram"><div><strong>COBWEB</strong><span>Illustrative modular cell concept</span></div></div><figcaption>Concept illustration only. This visual does not represent an actual installation, validated configuration or engineering specification.</figcaption></figure>;
+}

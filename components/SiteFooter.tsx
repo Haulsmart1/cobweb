@@ -1,0 +1,4 @@
+import Link from "next/link";
+export function SiteFooter() {
+  return <footer className="site-footer"><div className="footer-inner"><div><Link className="brand" href="/"><span className="brand-mark">CW</span><span>COBWEB<small>DEFENCE SYSTEMS</small></span></Link><p>An early-stage conceptual programme. No operational, certified or combat-proven capability is claimed. Feasibility remains to be established.</p></div><nav className="footer-nav" aria-label="Policies"><Link href="/about">About</Link><Link href="/privacy">Privacy</Link><Link href="/cookies">Cookies</Link><Link href="/terms">Terms</Link><Link href="/export-control">Export control</Link></nav></div></footer>;
+}
